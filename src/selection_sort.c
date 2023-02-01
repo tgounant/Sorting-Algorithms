@@ -1,0 +1,30 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Thibault Gounant
+//  January 2023
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void selection_sort(int array[], size_t start, size_t end)
+{
+    // loop to through the whole array
+    for (size_t i = start; i <= end; ++i)
+    {
+        // loop to compare each element
+        for (size_t j = i; j <= end; ++j)
+        {
+            // reverse comparison operator for descending order
+            if (array[i] > array[j])
+            {
+                // swap
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
